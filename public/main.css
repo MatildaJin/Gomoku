@@ -1,0 +1,64 @@
+@charset "utf-8";
+
+html, body {
+    height: 100%;
+    width: 100%;
+    color: #fff;
+}
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.restart {
+    color: #333;
+    padding: 10px 20px;
+    border-radius: 10px;
+    margin-right: 100px;
+    outline: none;
+    box-shadow: 1px 1px 3px #333;
+}
+.disabled {
+    color: #999;
+    background-color: #efefef;
+    box-shadow: none;
+}
+.partner-human, .undo, .partner-ai, .cancel {
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #f98405;
+    background-color: #f98405;
+}
+.partner-human:hover, .undo:hover, .partner-ai:hover, .cancel:hover, .restart:hover {
+    opacity: .8;
+}
+.partner-human::after{
+    content: 'Play with AI'
+}
+.undo::after{
+    content: 'Undo'
+}
+.partner-ai, .cancel {
+    background-color: #fff;
+    color: #f98405;
+}
+.partner-ai::after{
+    content: 'Play with human'
+}
+.cancel::after{
+    content: 'Cancel'
+}
+.hide {
+    display: none;
+}
+.game-container {
+    display: flex;
+    flex-direction: column;
+    width: 500px;
+    height: 700px;
+    align-items: center;
+    justify-content: space-around;
+}
+.gomoku {
+    box-shadow: 5px 5px 15px #999;
+}

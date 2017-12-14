@@ -1,0 +1,45 @@
+{
+  "name": "gomoku",
+  "version": "1.0.0",
+  "description": "a tiny game with stupid algorithm",
+  "main": "index.js",
+  "scripts": {
+    "test": "test",
+    "lint": "standard",
+    "lint-fix": "standard --fix"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MatildaJin/Gomoku.git"
+  },
+  "keywords": [
+    "game",
+    "gomoku"
+  ],
+  "author": "MatildaJin",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/MatildaJin/Gomoku/issues"
+  },
+  "homepage": "https://github.com/MatildaJin/Gomoku#readme",
+  "dependencies": {
+    "koa": "^2.4.1",
+    "koa-nunjucks-2": "^3.0.2",
+    "koa-router": "^7.3.0",
+    "koa-static": "^4.0.2"
+  },
+  "devDependencies": {
+    "pre-commit": "^1.2.2",
+    "standard": "^10.0.3",
+    "css-loader": "^0.28.4",
+    "postcss-loader": "^2.0.5",
+    "node-sass": "^4.5.3",
+    "style-loader": "^0.18.2"
+  },
+  // "pre-commit": [
+  //   "lint"
+  // ],
+  "standard": {
+    "ignore": []
+  }
+}
