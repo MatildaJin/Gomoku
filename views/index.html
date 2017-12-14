@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang='en'>
+    <head>
+        <title>{{title}}</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="main.css">
+    </head>
+
+    <body>
+        <header></header>
+        <button class="restart" id="j_restart" onclick="start()">RESTART</button>
+        <main class="game-container">
+            <div class="partner-human" id="j_partner" onclick="changeMode()"></div>
+            <canvas id="j_gomoku" class="gomoku" width="450px" height="450px" ></canvas>
+            <div class="undo" id="j_undo" onclick="undo()"></div>
+        </main>
+        <footer></footer>
+    </body>
+
+    <script type="text/javascript">
+        let wins = []                   // 赢法三维数组
+        let count = 0                   // 赢法计数
+        for(var i = 0; i < 15; i++){
+            wins[i] = []
+            for(var j = 0; j < 15; j++){
+                wins[i][j] = []
+            }
+        }
+
+        // 统计所有的赢法
+        for (var i = 0; i < 15; i++) {
+            for (var j = 0; j < 11; j++) {
+                for (var k = 0; k < 5; k++) {
+                    wins[i][j + k][count] = true;
+                }
+                count++;
+            }
+        }
+        for (var i = 0; i < 15; i++) {
+            for (var j = 0; j < 11; j++) {
+                for (var k = 0; k < 5; k++) {
+                    wins[j + k][i][count] = true;
+                }
+                count++;
+            }
+        }
+        for (var i = 0; i < 11; i++) {
+            for (var j = 0; j < 11; j++) {
+                for (var k = 0; k < 5; k++) {
+                    wins[i + k][j + k][count] = true;
+                }
+                count++;
+            }
+        }
+        for (var i = 0; i < 11; i++) {
+            for (var j = 14; j > 3; j--) {
+                for (var k = 0; k < 5; k++) {
+                 wins[i + k][j - k][count] = true;
+                }
+                count++;
+            }
+        }
+    </script>
+    <script src="ai.js"></script>
+    <script src="ui.js"></script>
+</html>
