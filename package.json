@@ -36,9 +36,6 @@
     "node-sass": "^4.5.3",
     "style-loader": "^0.18.2"
   },
-  // "pre-commit": [
-  //   "lint"
-  // ],
   "standard": {
     "ignore": []
   }
