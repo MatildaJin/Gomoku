@@ -18,6 +18,6 @@ app.use(nunjucks({
 
 router(app)
 
-app.listen(3000, () => {
+app.listen(80, () => {
   console.log('Hello World')
 })
